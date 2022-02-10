@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Back Button matches snapshot 1`] = `
+<button
+  className="back-btn"
+  data-testid="back-btn"
+  onClick={[Function]}
+>
+  Back to List of Locations
+</button>
+`;
+
+exports[`Current Weather Box matches snapshot 1`] = `
+<div
+  className="curwea-box"
+  data-testid="curwea-box"
+>
+  <div
+    className="location"
+  >
+    Test City, Test Country
+  </div>
+  <div
+    className="date"
+  >
+    8 February 2022
+  </div>
+  <div
+    className="weekday"
+  >
+    Tuesday
+  </div>
+  <div
+    className="time"
+  >
+    12:00:00 PM
+  </div>
+  <div
+    className="description"
+  >
+    CLOUDY
+  </div>
+  <div
+    className="temperature"
+  >
+    Temperature: 
+    1
+     °C
+  </div>
+  <div
+    className="feels"
+  >
+    Feels Like: 
+    -3
+     °C
+  </div>
+  <div
+    className="winddir"
+  >
+    Wind Direction: 
+    NW
+  </div>
+  <div
+    className="windspeed"
+  >
+    Wind Speed: 
+    5
+     m/s
+  </div>
+  <img
+    alt="weather symbol"
+    src="/assets/d300.png"
+  />
+</div>
+`;
+
+exports[`Error Box matches snapshot 1`] = `
+<div
+  className="error-box"
+  data-testid="error-box"
+>
+  <div>
+    No results found for '
+    
+    '
+  </div>
+</div>
+`;
+
+exports[`Forecast Box matches snapshot 1`] = `
+<div
+  className="forecast-box"
+  data-testid="forecast-box"
+>
+  <div
+    className="date"
+  >
+    8 February 2022
+  </div>
+  <div
+    className="weekday"
+  >
+    Tuesday
+  </div>
+  <div
+    className="description"
+  >
+    CLOUDY
+  </div>
+  <div
+    className="temperature"
+  >
+    Temperature: 
+    -1
+    ...
+    1
+     °C
+  </div>
+  <div
+    className="feels"
+  >
+    Feels Like: 
+    3
+    ...
+     °C
+  </div>
+  <div
+    className="windspeed"
+  >
+    Max Wind Speed: 
+    5
+     m/s
+  </div>
+  <img
+    alt="weather symbol"
+    src="/assets/d300.png"
+  />
+</div>
+`;
+
+exports[`Forecasts Box matches snapshot 1`] = `
+<div
+  className="forecasts-box"
+  data-testid="forecasts-box"
+/>
+`;
+
+exports[`Location Button matches snapshot 1`] = `
+<button
+  className="location-btn"
+  data-testid="location-btn"
+  onClick={[Function]}
+>
+  Test City
+  , 
+  Test Country
+</button>
+`;
+
+exports[`Locations Box matches snapshot 1`] = `
+<div
+  className="locations-box"
+  data-testid="locations-box"
+>
+  <button
+    className="location-btn"
+    data-testid="location-btn"
+    onClick={[Function]}
+  >
+    Test City
+    , 
+    Test Country
+  </button>
+  <button
+    className="location-btn"
+    data-testid="location-btn"
+    onClick={[Function]}
+  >
+    Test City
+    , 
+    Test Country
+  </button>
+  <button
+    className="location-btn"
+    data-testid="location-btn"
+    onClick={[Function]}
+  >
+    Test City
+    , 
+    Test Country
+  </button>
+  <button
+    className="location-btn"
+    data-testid="location-btn"
+    onClick={[Function]}
+  >
+    Test City
+    , 
+    Test Country
+  </button>
+  <button
+    className="location-btn"
+    data-testid="location-btn"
+    onClick={[Function]}
+  >
+    Test City
+    , 
+    Test Country
+  </button>
+</div>
+`;
+
+exports[`Search Bar matches snapshot 1`] = `
+<input
+  className="search-bar"
+  data-testid="search-bar"
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  placeholder="Please enter a city name..."
+  type="text"
+/>
+`;
+
+exports[`Search Box matches snapshot 1`] = `
+<div
+  className="search-box"
+  data-testid="search-box"
+>
+  <input
+    className="search-bar"
+    data-testid="search-bar"
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Please enter a city name..."
+    type="text"
+    value="test"
+  />
+  <button
+    className="search-btn"
+    data-testid="search-btn"
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;
+
+exports[`Search Button matches snapshot 1`] = `
+<button
+  className="search-btn"
+  data-testid="search-btn"
+  onClick={[Function]}
+>
+  Search
+</button>
+`;

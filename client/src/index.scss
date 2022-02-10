@@ -1,0 +1,322 @@
+$box-shadow: 1px 1px grey;
+$transition-duration: 250ms;
+$breakpoint: 1125px;
+
+
+%main-background {
+    background-color: #ffdea1;
+}
+
+%main-button {
+    background-color: #ff9933;
+    color: white;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    border: none;
+    transition-duration: $transition-duration;
+}
+
+%main-hover {
+    background-color: rgba(255,255,255, 0.75);
+    color: grey;
+    outline: none;
+}
+
+%main-box {
+    background-color: whitesmoke;
+    color: rgba(46, 46, 46, 0.87);
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    border: none;
+    transition-duration: $transition-duration;
+}
+
+%error-box {
+    @extend %main-box;
+    color: white;
+    background-color: #ff6666;
+    transition-duration: $transition-duration;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserat", sans-serif;
+}
+
+body {
+   @extend %main-background;
+}
+
+
+
+main {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+    grid-row-gap: 10px;
+    justify-items: center;
+
+    .weather-box {
+        min-width: 60%;
+        justify-content: center;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        display: grid;
+        grid-auto-rows: 40px;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+
+        .back-btn{
+            @extend %main-button;
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            min-width: 60%;
+        }
+
+        .back-btn:hover {
+            @extend %main-hover;
+        }
+
+        .curwea-box{
+            @extend %main-box;
+            min-width: 60%;
+            min-height: 100%;
+            padding: 5px;
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 2;
+            grid-row-end: 7;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 10%;
+            align-content: center;
+            justify-items: center;
+            gap: 5px;
+
+            .location {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                font-weight: bold;
+                font-size: 13px;
+            }
+
+            .date {
+                grid-column-start: 1;
+                grid-row-start: 2;
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            .weekday {
+                grid-column-start: 1;
+                grid-row-start: 3;
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            .time {
+                grid-column-start: 1;
+                grid-row-start: 4;
+                font-size: 15px;
+            }
+
+            .temperature {
+                grid-column-start: 1;
+                grid-row-start: 5;
+                font-size: 15px;
+            }
+
+            .feels {
+                grid-column-start: 1;
+                grid-row-start: 6;
+                font-size: 15px;
+            }
+
+            .winddir {
+                grid-column-start: 1;
+                grid-row-start: 7;
+                font-size: 15px;
+            }
+
+            .windspeed {
+                grid-column-start: 1;
+                grid-row-start: 8;
+                font-size: 15px;
+            }
+
+            img {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 8;
+                max-height: 60%;
+                width: auto;
+            }
+
+            .description {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 15px;
+            }
+        }
+
+        .curwea-box:hover {
+            @extend %main-hover;
+        }
+
+        @media screen and (min-width:$breakpoint) {
+
+        .forecasts-box{
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 7;
+            min-width: 60%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        
+        }
+    }
+            .forecast-box{
+                @extend %main-box;
+                gap: 3px;
+                padding: 5px;
+                display: grid;
+                justify-items: center;
+                font-size: 12px;
+                min-width: 14%;
+                max-width: 100%;
+                height: 100%;
+
+
+                .date {
+                font-weight: bold;
+                }
+
+                .weekday {
+                    font-weight: bold;
+                }
+
+                .description {
+                font-weight: bold;
+                font-style: italic;
+                }
+
+                img {
+                    max-width: 40%;
+                    height: auto;
+                }
+            }
+
+            .forecast-box:hover {
+                @extend %main-hover;
+            }
+        
+    }
+    .error-box{
+        @extend %error-box;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        min-width: 350px;
+        display: grid;
+        grid-auto-rows: 40px;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .error-box:hover {
+        @extend %main-hover;
+    }
+
+    .locations-box{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        display: grid;
+        grid-auto-rows: 40px;
+        grid-row-gap: 5px;
+        min-width: 350px;
+
+        
+        .location-btn {
+            @extend %main-button;
+        }
+
+        .location-btn:hover {
+            @extend %main-hover;
+        }
+    }
+
+    .search-box {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        min-width: 350px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    
+        .search-bar {
+            @extend %main-box;
+            text-align: center;
+            text-justify: center;
+        }
+    
+        .search-btn {
+            @extend %main-button;
+            margin-left: 5px;
+        }
+
+        .search-bar::placeholder {
+            text-align: center;
+            text-justify: center;
+        }
+        
+        .search-bar:focus {
+            @extend %main-hover;
+        }
+
+        .search-bar:focus::placeholder {
+            color: transparent;
+        }
+        
+        .search-bar:hover {
+            @extend %main-hover;
+        }
+        
+        .search-btn:hover {
+            @extend %main-hover;
+        }
+    }
+}
+
+@media screen and (max-width:$breakpoint) {
+    .forecasts-box{
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 7;
+        min-width: 60%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1px;
+    }
+}
