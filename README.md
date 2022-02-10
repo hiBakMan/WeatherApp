@@ -18,9 +18,10 @@ Addionally:
 
 ### !!! IMPORTANT !!!
 
+- After downloading the repository "npm install" should be initialized from both directories - root and client - to ensure that node modules are installed for both server side and client side.
+- Full app (both client and server sides) could be run in the root directory with the following command: "npm run dev".
 - Frontend could be run in the "/client/" directory with the following command: "npm start".
 - Backend could be run in the root directory with the following command: "npm run server".
-- Full app (both client and server sides) could be run in the root directory with the following command: "npm run dev".
 - Mongo DB link should be added to the root env variable as "mongoURI".
 - Foreca API key should be added to the "/client/" env variable as "REACT_APP_KEY".
 - Unit tests could be run in the "/client/" directory with the following command: "npm test".
